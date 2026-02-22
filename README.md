@@ -1,8 +1,6 @@
-# ping
+# ping — enhanced ping for macOS
 
-Enhanced ping with timestamps and color-coded output.
-
-Wraps the system `ping` binary, adding a timestamp to every line, coloring successes green and failures red, and printing a clean summary on exit.
+A Swift CLI that wraps the system `ping`, adding timestamps to every response, color-coding successes and failures, and printing a clean packet loss summary on exit.
 
 ## Install
 
