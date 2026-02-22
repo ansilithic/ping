@@ -5,14 +5,14 @@ A Swift CLI that wraps the system `ping`, adding timestamps to every response, c
 ## Install
 
 ```sh
-swift build -c release
-cp .build/release/ping ~/.local/bin/
+brew install ansilithic/tap/ping
 ```
 
-Or with Make:
+Or build from source:
 
 ```sh
-make build install
+swift build -c release
+cp .build/release/ping ~/.local/bin/
 ```
 
 ## Usage
