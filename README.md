@@ -14,7 +14,7 @@ Or build from source:
 
 ```sh
 swift build -c release
-cp .build/release/ping ~/.local/bin/
+cp .build/release/ping /usr/local/bin/
 ```
 
 ## Usage
