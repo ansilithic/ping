@@ -1,10 +1,18 @@
-# ping — advanced ping for macOS
+# ping
 
-A Swift CLI that wraps the system `ping`, adding timestamps to every response, color-coding successes and failures, and printing a clean packet loss summary on exit.
+![Swift 6.0](https://img.shields.io/badge/Swift-6.0-F05138?logo=swift&logoColor=white)
+![macOS 14+](https://img.shields.io/badge/macOS-14%2B-000000?logo=apple&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue)
 
-This isn't your average everyday ping. This is... *advanced ping.*
+Enhanced ping for macOS — timestamps, color-coded output, and a clean packet loss summary.
 
-![ping demo](assets/demo.gif)
+![ping](assets/hero.png)
+
+## How it works
+
+`ping` wraps the system `/sbin/ping`, adding a timestamp to every response line. Successful replies print in green, timeouts and errors in red, and diagnostic lines in dim gray. On exit (or Ctrl-C), a summary line reports sent, received, and lost packets with loss percentage — replacing the verbose system summary.
+
+All standard ping flags pass through directly to the system binary.
 
 ## Install
 
@@ -12,21 +20,32 @@ This isn't your average everyday ping. This is... *advanced ping.*
 brew install ansilithic/tap/ping
 ```
 
-Or build from source:
+Or build from source (requires Xcode and macOS 14+):
 
 ```sh
-swift build -c release
-cp .build/release/ping /usr/local/bin/
+make build && make install
 ```
 
 ## Usage
 
-```sh
-ping google.com
-ping 1.1.1.1 -c 5
+```
+ping <target> [ping options]
 ```
 
-All standard `ping` flags are passed through to the system binary.
+All standard `/sbin/ping` flags work — `-c` (count), `-i` (interval), `-s` (packet size), etc.
+
+### Examples
+
+```sh
+# Ping with timestamps and color
+ping google.com
+
+# Five packets then stop
+ping 1.1.1.1 -c 5
+
+# Fast ping with 0.2s interval
+ping 10.0.1.1 -i 0.2
+```
 
 ## License
 
