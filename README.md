@@ -2,7 +2,7 @@
 
 A Swift CLI that wraps the system `ping`, adding timestamps to every response, color-coding successes and failures, and printing a clean packet loss summary on exit.
 
-![ping](assets/screenshot.png)
+![ping](assets/demo.gif)
 
 ## Install
 
