@@ -1,8 +1,10 @@
-# ping — enhanced ping for macOS
+# ping — advanced ping for macOS
 
 A Swift CLI that wraps the system `ping`, adding timestamps to every response, color-coding successes and failures, and printing a clean packet loss summary on exit.
 
-![ping](assets/demo.gif)
+This isn't your average everyday ping. This is... *advanced ping.*
+
+![ping demo](assets/demo.gif)
 
 ## Install
 
