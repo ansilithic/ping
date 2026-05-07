@@ -16,11 +16,7 @@ All standard ping flags pass through directly to the system binary.
 
 ## Install
 
-```sh
-brew install ansilithic/tap/ping
-```
-
-Or build from source (requires Xcode and macOS 14+):
+Build from source (requires Xcode and macOS 14+):
 
 ```sh
 make build && make install
